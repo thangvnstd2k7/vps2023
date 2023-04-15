@@ -34,11 +34,11 @@ function TP2(P1)
                 
                     local DiscordLib = loadstring(game:HttpGet"https://gist.githubusercontent.com/TheBeautiFullBeach/406a6956595916f2abaaeef8478c0164/raw/ae1362d7ea85fe289d627790521dca16fc3c8d55/PattayaBeach")()
 
-                    local win = DiscordLib:Window("Lazium Blox Fruit")
+                    local win = DiscordLib:Window("thanhevo teleport")
             
                     local serv = win:Server("Main","")
             
-                    local Island_Tab = serv:Channel("Teleport", "http://www.roblox.com/asset/?id=7040387707")
+                    local Island_Tab = serv:Channel("dịch chuyển", "http://www.roblox.com/asset/?id=7040387707")
 
 
                     function TP_World1()
@@ -153,7 +153,7 @@ end
                 
                 elseif New_World then
 
-                    Island_Tab:Button("Dock", function()
+                    Island_Tab:Button("cầu thang chổ mới tới sea 2", function()
                         TP2(CFrame.new(-12.519311904907, 19.302536010742, 2827.853515625))
                     end)
                 
@@ -169,7 +169,7 @@ end
                         TP2(CFrame.new(-379.70889282227, 73.0458984375, 304.84692382813))
                     end)
                 
-                    Island_Tab:Button("Sunflower Field", function()
+                    Island_Tab:Button("cánh dồng hoa hướng dương", function()
                         TP2(CFrame.new(-1576.7171630859, 198.61849975586, 13.725157737732))
                     end)
                 
@@ -193,11 +193,11 @@ end
                         TP2(CFrame.new(-2202.3706054688, 73.097663879395, -2819.2687988281))
                     end)
                 
-                    Island_Tab:Button("Graveyard", function()
+                    Island_Tab:Button("đảo nghĩa địa", function()
                         TP2(CFrame.new(-5617.5927734375, 492.22183227539, -778.3017578125))
                     end)
                 
-                    Island_Tab:Button("Dark Area", function()
+                    Island_Tab:Button("nơi triều hồi râu đen", function()
                         TP2(CFrame.new(3464.7700195313, 13.375151634216, -3368.90234375))
                     end)
                 
