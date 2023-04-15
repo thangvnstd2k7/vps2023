@@ -68,3 +68,29 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/tp"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "nhảy vô hạn",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "nhảy vô hạn",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/inf%20jump.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "mod bay",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "mod bay",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/fly.lua"))()
+  	end    
+})
