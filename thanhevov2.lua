@@ -55,3 +55,16 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/speed.lua"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "menu dịch chuyển",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "menu dịch chuyển",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/tp"))()
+  	end    
+})
