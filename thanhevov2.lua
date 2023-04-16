@@ -94,3 +94,16 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/fly.lua"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "menu thành làm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "menu thành làm",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/thangvnstd2k7/vps2023/main/Menu.Lua"))()
+  	end    
+})
