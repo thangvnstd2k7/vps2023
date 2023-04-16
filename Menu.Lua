@@ -2127,22 +2127,22 @@ end)
 --------------------------------------------------------------------
 local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/zeroscgaming/zeroscgaming/main/RDE.lib/Dark%20UI", true))()
 
-local Library = DarkraiX:Window("thành evo","Blox-Fruit","RightAlt",Enum.KeyCode.RightControl);
+local Library = DarkraiX:Window("thanh evo v2","Blox-Fruit","RightAlt",Enum.KeyCode.RightControl);
 
 --------------------------------------------------------------------
-local Main = Library:AddTab("menu farm","6026568198")
+local Main = Library:AddTab("Menu Farm","6026568198")
 local auto = Library:AddTab("tự động lấy item","6026568198")
 local Combat = Library:AddTab("người chơi","7251993295")
 local Stats = Library:AddTab("chỉ số","7040410130")
-local Teleport = Library:AddTab("dịch chuyển","6035190846")
+local Teleport = Library:AddTab("dịch chuyển đến đảo","6035190846")
 local Dungeon = Library:AddTab("Raid","7044284832")
 local DevilFruit = Library:AddTab("trái ác quỷ","7044233235")
-local Shop = Library:AddTab("Shop","6031265976")
+local Shop = Library:AddTab("cửa hàng","6031265976")
 local Misc = Library:AddTab("Miscellaneous","6034509993")
-local fast = Library:AddTab("Setting & fast attack","Attack")
+local fast = Library:AddTab("cài đặt & đánh nhan","Attack")
 --------------------------------------------------------------------
-Main:AddSeperator("thành evo _hack free")
-Main:AddSeperator("v2 của thành evo")
+Main:AddSeperator("thanh evo v2 - Freescript")
+Main:AddSeperator("v2")
 
 Time = Main:AddLabel("Server Time")
 
@@ -2162,7 +2162,7 @@ end)
 end
 end)
 
-Main:AddButton("Remove Sound",function()
+Main:AddButton("xóa âm thanh",function()
 
 
 
@@ -2181,7 +2181,7 @@ Main:AddButton("Delete Effect Damage", function()
 game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled = false
 end)
 
-fast:AddSeperator("Attack Settings")
+fast:AddSeperator("cài đặt đánh nhanh")
 
 fast:AddToggle("đánh nhanh",true,function(Fast)
 
@@ -2211,7 +2211,7 @@ task.wait()
 end
 end)
 
-fast:AddToggle("đánh nhanh loại 1",false,function(Fastz)
+fast:AddToggle("đánh nhanh 1",false,function(Fastz)
 
 _G.FastAttack1 = Fastz
 
@@ -2239,7 +2239,7 @@ task.wait()
 end
 end)
 
-fast:AddToggle("đánh nhanh loại 2",false,function(Fastx)
+fast:AddToggle("đánh nhanh 2",false,function(Fastx)
 
 _G.FastAttack2 = Fastx
 
@@ -2267,7 +2267,7 @@ task.wait()
 end
 end)
 
-fast:AddToggle("đánh nhanh loại 3",false,function(Fastc)
+fast:AddToggle("đánh nhanh 3",false,function(Fastc)
 
 _G.FastAttack3 = Fastc
 
@@ -2295,7 +2295,7 @@ task.wait()
 end
 end)
 
-fast:AddToggle("đánh nhanh loại 4",false,function(Fastd)
+fast:AddToggle("đánh nhanh 4",false,function(Fastd)
 
 _G.FastAttack4 = Fastd
 
@@ -2339,19 +2339,19 @@ end
 end)
 end)
 
-Main:AddToggle("mang quái",true,function(value)
+Main:AddToggle("mang con quái",true,function(value)
 _G.BringMonster = value
 end)
 
 WeaponList = {}
 
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-if v:IsA("chọn vũ khí") then
+if v:IsA("Tool") then
 table.insert(WeaponList ,v.Name)
 end
 end
 
-local SelectWeapona = Main:AddDropdown("Select Weapon",WeaponList,function(value)
+local SelectWeapona = Main:AddDropdown("chọn vũ khí",WeaponList,function(value)
 _G.SelectWeapon = value
 end)
 
@@ -2364,7 +2364,7 @@ end)
 
 Main:AddSeperator("Main")
 
-local AutoFarm = Main:AddToggle("tự động farm lv",_G.AutoFarm,function(value)
+local AutoFarm = Main:AddToggle("tự động cày lv",_G.AutoFarm,function(value)
 _G.AutoFarm = value
 StopTween(_G.AutoFarm)
 end)
@@ -2437,7 +2437,7 @@ end
 end)
 
 if World1 then
-auto:AddToggle("tự dộng làm nv qua sea 2",_G.AutoSecondSea,function(value)
+auto:AddToggle("tự động qua sea 2",_G.AutoSecondSea,function(value)
 _G.AutoSecondSea = value
 StopTween(_G.AutoSecondSea)
 end)
@@ -2548,7 +2548,7 @@ end)
 end
 
 if World2 then
-auto:AddToggle("tự động đánh nhà máy",_G.AutoFactory,function(value)
+auto:AddToggle("Auto Farm Factory",_G.AutoFactory,function(value)
 _G.AutoFactory = value
 StopTween(_G.AutoFactory)
 end)
@@ -2699,7 +2699,7 @@ end
 end
 end)
 
-Main:AddToggle("tự động lấy tộc người cá",_G.AutoSharkman,function(value)
+Main:AddToggle("Auto Sharkman Karate",_G.AutoSharkman,function(value)
 _G.AutoSharkman = value
 end)
 
@@ -2747,7 +2747,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động lấy Electric Claw",_G.AutoElectricClaw,function(value)
+Main:AddToggle("Auto Electric Claw",_G.AutoElectricClaw,function(value)
 _G.AutoElectricClaw = value
 StopTween(_G.AutoElectricClaw)
 end)
@@ -2818,7 +2818,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động lấy võ rồng",_G.AutoDragonTalon,function(value)
+Main:AddToggle("Auto Dragon Talon",_G.AutoDragonTalon,function(value)
 _G.AutoDragonTalon = value
 end)
 
@@ -2846,7 +2846,7 @@ end)
 
 Main:AddSeperator("Mastery")
 
-Main:AddToggle("tự cày mastery trái ác quỷ",_G.AutoFarmFruitMastery,function(value)
+Main:AddToggle("tự động cày Mastery fruit",_G.AutoFarmFruitMastery,function(value)
 _G.AutoFarmFruitMastery = value
 StopTween(_G.AutoFarmFruitMastery)
 if _G.AutoFarmFruitMastery == false then
@@ -3102,7 +3102,7 @@ end)
 end)
 end)
 
-Main:AddToggle("tự động Farm Mastery súng",_G.AutoFarmGunMastery,function(value)
+Main:AddToggle("Auto Farm Gun Mastery",_G.AutoFarmGunMastery,function(value)
 _G.AutoFarmGunMastery = value
 StopTween(_G.AutoFarmGunMastery)
 end)
@@ -3199,7 +3199,7 @@ for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
 if string.find(v.Name, "Boss") then
 if v.Name == "Ice Admiral [Lv. 700] [Boss]" then
 else
-table.insert(trùm, v.Name)
+table.insert(Boss, v.Name)
 end
 end
 end
@@ -3217,7 +3217,7 @@ end
 end
 end)
 
-Main:AddToggle("tự động Farm trùm",_G.AutoFarmBoss,function(value)
+Main:AddToggle("tự động Farm Boss",_G.AutoFarmBoss,function(value)
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
 _G.AutoFarmBoss = value
 StopTween(_G.AutoFarmBoss)
@@ -3255,12 +3255,12 @@ end
 end
 end)
 
-Main:AddToggle("tự động farm tất cả trùm",_G.AutoAllBoss,function(value)
+Main:AddToggle("tự động Farm tất cả Boss",_G.AutoAllBoss,function(value)
 _G.AutoAllBoss = value
 StopTween(_G.AutoAllBoss)
 end)
 
-Main:AddToggle("tự động farm tất cả trùm Hop",_G.AutoAllBossHop,function(value)
+Main:AddToggle("tự động Farm tất cả Boss Hop",_G.AutoAllBossHop,function(value)
 _G.AutoAllBossHop = value
 end)
 
@@ -3420,7 +3420,7 @@ end)
 
 Main:AddSeperator("Advance Dungeon")
 
-Main:AddToggle("tự động raid Nâng cao",_G.AutoAdvanceDungeon,function(value)
+Main:AddToggle("Auto Advance Dungeon",_G.AutoAdvanceDungeon,function(value)
 _G.AutoAdvanceDungeon = value
 StopTween(_G.AutoAdvanceDungeon)
 end)
@@ -3462,7 +3462,7 @@ _G.AutoBudySword = value
 StopTween(_G.AutoBudySword)
 end)
 
-Main:AddToggle("Auto Buddy Sword Hop",_G.AutoBudySwordHop,function(value)
+Main:AddToggle("tự động lấy Buddy Sword Hop",_G.AutoBudySwordHop,function(value)
 _G.AutoBudySwordHop = value
 end)
 
@@ -3514,7 +3514,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động Elite Hunter",_G.AutoElitehunter,function(value)
+Main:AddToggle("Auto Elite Hunter",_G.AutoElitehunter,function(value)
 _G.AutoElitehunter = value
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
 StopTween(_G.AutoElitehunter)
@@ -3587,7 +3587,7 @@ _G.AutoFarmBossHallow = value
 StopTween(_G.AutoFarmBossHallow)
 end)
 
-Main:AddToggle("Auto Hallow Scythe Hop",_G.AutoFarmBossHallowHop,function(value)
+Main:AddToggle("tự động lấy Hallow Scythe Hop",_G.AutoFarmBossHallowHop,function(value)
 _G.AutoFarmBossHallowHop = value
 end)
 
@@ -3714,7 +3714,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động lấy Swan Glasses Hop",_G.AutoFarmSwanGlasses_Hop,function(value)
+Main:AddToggle("tự lấy Swan Glasses Hop",_G.AutoFarmSwanGlasses_Hop,function(value)
 _G.AutoFarmSwanGlasses_Hop = value
 end)
 
@@ -3730,7 +3730,7 @@ end)
 
 Main:AddSeperator("Bone")
 
-local BoneFarm = Main:AddToggle("tự động Farm Bone",_G.Auto_Bone,function(value)
+local BoneFarm = Main:AddToggle("Auto Farm Bone",_G.Auto_Bone,function(value)
 _G.Auto_Bone = value
 StopTween(_G.Auto_Bone)
 end)
@@ -3777,7 +3777,7 @@ end
 end
 end)
 
-Main:AddToggle("tụ động bốc Surprise",_G.Auto_Random_Bone,function(value)
+Main:AddToggle("Auto Random Surprise",_G.Auto_Random_Bone,function(value)
 _G.Auto_Random_Bone = value
 end)
 
@@ -3803,7 +3803,7 @@ end)
 end
 end)
 
-Main:AddToggle("tự farm haki quan sát",_G.AutoObservation,function(value)
+Main:AddToggle("tự động farm haki quan sát",_G.AutoObservation,function(value)
 _G.AutoObservation = value
 StopTween(_G.AutoObservation)
 end)
@@ -3825,7 +3825,7 @@ end)
 end
 end)
 
-Main:AddToggle("tự farm haki quan sát Hop",_G.AutoObservation_Hop,function(value)
+Main:AddToggle("tự farm haki quan sát hop",_G.AutoObservation_Hop,function(value)
 _G.AutoObservation_Hop = value
 end)
 
@@ -3837,7 +3837,7 @@ if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
 game:GetService("StarterGui"):SetCore("SendNotification", {
 Icon = "rbxassetid://0";
 Title = "Observation",
-Text = "mày max điểm rồi"
+Text = "You Have Max Points"
 })
 wait(2)
 else
@@ -3909,7 +3909,7 @@ _G.AutoSaber = value
 StopTween(_G.AutoSaber)
 end)
 
-Main:AddToggle("tự động lấy Saber Hop",_G.AutoSaber_Hop,function(value)
+Main:AddToggle("tự lấy saber hop",_G.AutoSaber_Hop,function(value)
 _G.AutoSaber_Hop = value
 end)
 
@@ -3985,7 +3985,7 @@ end
 end
 end)
 
-Main:AddToggle("tự lấy kiếm huyền thoại Hop",_G.AutoBuyLegendarySword_Hop,function(value)
+Main:AddToggle("tự lấy kiếm huyền thoại hop",_G.AutoBuyLegendarySword_Hop,function(value)
 _G.AutoBuyLegendarySword_Hop = value
 end)
 
@@ -4017,7 +4017,7 @@ end)
 
 Main:AddSeperator("Other")
 
-Main:AddToggle("tự động lấy Musketeer Hat",_G.AutoMusketeerHat,function(value)
+Main:AddToggle("tự động lấy mũ Musketeer",_G.AutoMusketeerHat,function(value)
 _G.AutoMusketeerHat = value
 StopTween(_G.AutoMusketeerHat)
 end)
@@ -4098,7 +4098,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động lấy Haki bảy màu",_G.Auto_Rainbow_Haki,function(value)
+Main:AddToggle("tự động lấy haki 7 màu",_G.Auto_Rainbow_Haki,function(value)
 _G.Auto_Rainbow_Haki = value
 StopTween(_G.Auto_Rainbow_Haki)
 end)
@@ -4225,7 +4225,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự đống nâng Haki quan sát v2",_G.AutoObservationv2,function(value)
+Main:AddToggle("tự động nâng haki quan sát v2",_G.AutoObservationv2,function(value)
 _G.AutoObservationv2 = value
 StopTween(_G.AutoObservationv2)
 end)
@@ -4308,7 +4308,7 @@ end
 end)
 end)
 
-Main:AddToggle("tụ farm chất kì dị",_G.AutoEctoplasm,function(value)
+Main:AddToggle("tự động farm vật chất kì dị",_G.AutoEctoplasm,function(value)
 _G.AutoEctoplasm = value
 StopTween(_G.AutoEctoplasm)
 end)
@@ -4352,7 +4352,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động lấy kiếm Yama",_G.AutoYama,function(value)
+Main:AddToggle("tự động lấy yama",_G.AutoYama,function(value)
 _G.AutoYama = value
 StopTween(_G.AutoYama)
 end)
@@ -4424,7 +4424,7 @@ end
 end)
 end)
 
-Main:AddToggle("tự động làm nv Bartlio",_G.AutoBartilo,function(value)
+Main:AddToggle("Auto Bartlio Quest",_G.AutoBartilo,function(value)
 _G.AutoBartilo = value
 end)
 
@@ -4780,7 +4780,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 table.insert(Playerslist,v.Name)
 end
 
-local SelectedPly = Combat:AddDropdown("Select Players",Playerslist,function(value)
+local SelectedPly = Combat:AddDropdown("chọn người chơi",Playerslist,function(value)
 _G.SelectPly = value
 end)
 
@@ -4802,7 +4802,7 @@ until SpectatePlys == false
 game:GetService("Workspace").Camera.CameraSubject = game:GetService("Players").LocalPlayer.Character.Humanoid
 end)
 
-Combat:AddToggle("dịch chuyển",false,function(value)
+Combat:AddToggle("Teleport",false,function(value)
 _G.TeleportPly = value
 pcall(function()
 if _G.TeleportPly then
@@ -4892,7 +4892,7 @@ end
 end
 end)
 
-Combat:AddToggle("Aimbot chiêu",false,function(value)
+Combat:AddToggle("Aimbot Skill",false,function(value)
 _G.Aimbot_Skill = value
 end)
 
@@ -4912,7 +4912,7 @@ end)
 
 Combat:AddSeperator("PvP")
 
-Combat:AddToggle("mở PvP",false,function(value)
+Combat:AddToggle("tự động mở pvp",false,function(value)
 _G.EnabledPvP = value
 end)
 
@@ -4928,7 +4928,7 @@ end
 end)
 end)
 
-Combat:AddToggle("chế độ an toàn",false,function(value)
+Combat:AddToggle("chế dộ an toàn",false,function(value)
 _G.Safe_Mode = value
 StopTween(_G.Safe_Mode)
 end)
@@ -5007,7 +5007,7 @@ end)
 end
 end)
 
-Combat:AddToggle("tự động Farm Bounty",_G.AutoFarmBounty,function(value)
+Combat:AddToggle("tự động farm bounty",_G.AutoFarmBounty,function(value)
 _G.AutoFarmBounty = value
 StopTween(_G.AutoFarmBounty)
 end)
@@ -5170,7 +5170,7 @@ end
 end)
 end)
 
-Combat:AddToggle("tự động Farm Bounty Hop",_G.AutoFarmBounty_Hop,function(value)
+Combat:AddToggle("tự động farm bounty hop",_G.AutoFarmBounty_Hop,function(value)
 _G.AutoFarmBounty_Hop = value
 end)
 
@@ -5189,7 +5189,7 @@ end)
 
 Combat:AddSeperator("Misc Bounty")
 
-Combat:AddButton("chọn người chơi khác",function()
+Combat:AddButton("người chơi khác",function()
 NextplySelect = true
 wait(.1)
 NextplySelect = false
@@ -5199,7 +5199,7 @@ Combat:AddSlider("khóa bounty",1,25000000,750000,function(value)
 _G.BountyLock = value
 end)
 
-Combat:AddToggle("bắt đầu khóa Bounty",false,function(value)
+Combat:AddToggle("bắt đầu khóa bounty",false,function(value)
 _G.StartBountyLock = value
 end)
 
@@ -5385,7 +5385,7 @@ end)
 end
 end)
 
-local localDevil = Stats:AddLabel("trái ác quỷ")
+local localDevil = Stats:AddLabel("Devil Fruit")
 
 spawn(function()
 while wait() do
@@ -5478,7 +5478,7 @@ Teleport:AddButton("dịch chuyển đến sea 3",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 end)
 
-Teleport:AddButton("Teleport to Seabeast",function()
+Teleport:AddButton("dịch chuyển đến thủy quái",function()
 for i,v in pairs(game:GetService("Workspace").SeaBeasts:GetChildren()) do
 if v:FindFirstChild("HumanoidRootPart") then
 topos(v.HumanoidRootPart.CFrame*CFrame.new(0,100,0))
@@ -5514,7 +5514,7 @@ end)
 end
 
 if World2 then
-Teleport:AddDropdown("Select Island",{
+Teleport:AddDropdown("chọn đảo",{
 "The Cafe",
 "Frist Spot",
 "Dark Area",
@@ -5537,7 +5537,7 @@ end)
 end
 
 if World3 then
-Teleport:AddDropdown("Select Island",{
+Teleport:AddDropdown("chọn đảo",{
 "Mansion",
 "Port Town",
 "Great Tree",
@@ -5670,7 +5670,7 @@ end
 end)
 end)
 
-Dungeon:AddToggle("tự đi raid",_G.Auto_Dungeon,function(value)
+Dungeon:AddToggle("tự farm raid",_G.Auto_Dungeon,function(value)
 _G.Auto_Dungeon = value
 StopTween(_G.Auto_Dungeon)
 end)
@@ -5719,7 +5719,7 @@ end
 end)
 end)
 
-Dungeon:AddToggle("tự thức tỉnh",_G.Auto_Awakener,function(value)
+Dungeon:AddToggle("tự dộng thức tỉnh",_G.Auto_Awakener,function(value)
 _G.Auto_Awakener = value
 end)
 
@@ -5736,11 +5736,11 @@ end)
 
 Dungeon:AddLine()
 
-Dungeon:AddDropdown("chọn Chips",{"Flame","Ice","Quake","Light","Dark","String","Rumble","Magma","Human: Buddha","Sand","Bird: Phoenix"},function(value)
+Dungeon:AddDropdown("Select Chips",{"Flame","Ice","Quake","Light","Dark","String","Rumble","Magma","Human: Buddha","Sand","Bird: Phoenix"},function(value)
 _G.SelectChip = value
 end)
 
-Dungeon:AddToggle("tự bắt đầu raid",_G.AutoSelectDungeon,function(value)
+Dungeon:AddToggle("tự chọn raid",_G.AutoSelectDungeon,function(value)
 _G.AutoSelectDungeon = value
 end)
 
@@ -5778,7 +5778,7 @@ end
 end
 end)
 
-Dungeon:AddToggle("tự mua Chip",_G.AutoBuyChip,function(value)
+Dungeon:AddToggle("tự động mua chip",_G.AutoBuyChip,function(value)
 _G.AutoBuyChip = value
 end)
 
@@ -5800,7 +5800,7 @@ Dungeon:AddButton("mua chip đã chọn",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select",_G.SelectChip)
 end)
 
-Dungeon:AddToggle("tự bắt đầu raid",_G.Auto_StartRaid,function(value)
+Dungeon:AddToggle("tự động bắt đầu raid",_G.Auto_StartRaid,function(value)
 _G.Auto_StartRaid = value
 end)
 
@@ -5832,7 +5832,7 @@ end)
 
 Dungeon:AddLine()
 
-Dungeon:AddButton("đảo tiếp theo",function()
+Dungeon:AddButton("Next Island",function()
 pcall(function()
 if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5") then
 TP(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame*CFrame.new(0,70,100))
@@ -5849,21 +5849,21 @@ end)
 end)
 
 if World2 then
-Dungeon:AddButton("dịch chuyển đến Lab",function()
+Dungeon:AddButton("Teleport to Lab",function()
 TP(CFrame.new(-6438.73535, 250.645355, -4501.50684))
 end)
 elseif World3 then
-Dungeon:AddButton("dịch chuyển đến Lab",function()
+Dungeon:AddButton("Teleport to Lab",function()
 TP(CFrame.new(-5017.40869, 314.844055, -2823.0127, -0.925743818, 4.48217499e-08, -0.378151238, 4.55503146e-09, 1, 1.07377559e-07, 0.378151238, 9.7681621e-08, -0.925743818))
 end)
 end
 
 if World2 then
-Dungeon:AddButton("phòng thức tỉnh",function()
+Dungeon:AddButton("Awakening Room",function()
 TP(CFrame.new(266.227783, 1.39509034, 1857.00732))
 end)
 elseif World3 then
-Dungeon:AddButton("phòng thức tỉnh",function()
+Dungeon:AddButton("Awakening Room",function()
 TP(CFrame.new(-11571.440429688, 49.172668457031, -7574.7368164062))
 end)
 end
@@ -5917,11 +5917,11 @@ end)
 
 DevilFruit:AddSeperator("Others")
 
-DevilFruit:AddDropdown("Select Fruits Eat",FruitList,function(value)
+DevilFruit:AddDropdown("chọn fruit để ăn",FruitList,function(value)
 _G.SelectFruitEat = value
 end)
 
-DevilFruit:AddToggle("Auto Eat Fruit",_G.AutoEatFruit,function(value)
+DevilFruit:AddToggle("tự ăn fruit",_G.AutoEatFruit,function(value)
 _G.AutoEatFruit = value
 end)
 
@@ -5935,7 +5935,7 @@ end
 end)
 end)
 
-DevilFruit:AddToggle("Auto Eat Fruit Hop",_G.AutoEatFruitHop,function(value)
+DevilFruit:AddToggle("tự ăn fruit hop",_G.AutoEatFruitHop,function(value)
 _G.AutoEatFruitHop = value
 end)
 
@@ -5964,7 +5964,7 @@ end
 end)
 end)
 
-DevilFruit:AddToggle("tự động bốc fruit",_G.Random_Auto,function(value)
+DevilFruit:AddToggle("tự random trái ác quỷ",_G.Random_Auto,function(value)
 _G.Random_Auto = value
 end)
 
@@ -5978,12 +5978,12 @@ end
 end)
 end)
 
-DevilFruit:AddButton("bốc fruit",function()
+DevilFruit:AddButton("bốc trái ác quỷ",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
 end)
 
 
-DevilFruit:AddToggle("tụ ném trái ác quỷ",_G.DropFruit,function(value)
+DevilFruit:AddToggle("tự dộng vức fruit",_G.DropFruit,function(value)
 _G.DropFruit = value
 end)
 
@@ -6018,7 +6018,7 @@ end
 end
 end)
 
-DevilFruit:AddToggle("tự bỏ fruit vô túi",_G.AutoStoreFruit,function(value)
+DevilFruit:AddToggle("tự dộng bỏ trái ác quỷ vào túi dồ",_G.AutoStoreFruit,function(value)
 _G.AutoStoreFruit = value
 end)
 
@@ -6035,7 +6035,7 @@ end)
 end)
 
 
-DevilFruit:AddToggle("tự động lụm fruit",_G.BringFruit,function(value)
+DevilFruit:AddToggle("lụn fruit",_G.BringFruit,function(value)
 _G.BringFruit = value
 pcall(function()
 while _G.BringFruit do wait(.1)
@@ -6052,65 +6052,65 @@ end
 end)
 end)
 
-Shop:AddSeperator("khả năng")
+Shop:AddSeperator("Abilities")
 
-Shop:AddButton("mua Geppo",function()
+Shop:AddButton("Buy Geppo",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
 end)
 
-Shop:AddButton("mua Buso Haki",function()
+Shop:AddButton("Buy Buso Haki",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
 end)
 
-Shop:AddButton("mua Soru",function()
+Shop:AddButton("Buy Soru",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
 end)
 
-Shop:AddButton("mua hake quan sát",function()
+Shop:AddButton("Buy Observation(Ken) Haki",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
 end)
 
-Shop:AddSeperator("tộc")
+Shop:AddSeperator("Fighting Style")
 
-Shop:AddButton("mua tộc chân đen",function()
+Shop:AddButton("Buy Black Leg",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
 end)
 
-Shop:AddButton("mua tộc điện",function()
+Shop:AddButton("Buy Electro",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
 end)
 
-Shop:AddButton("mua tộc cá",function()
+Shop:AddButton("Buy Fishman Karate",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
 end)
 
-Shop:AddButton("mua võ rồng",function()
+Shop:AddButton("Buy Dragon Claw",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
 end)
 
-Shop:AddButton("mua thượng nhân quyền",function()
+Shop:AddButton("Buy Superhuman",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
 end)
 
-Shop:AddButton("mua chân đen v2",function()
+Shop:AddButton("Buy Death Step",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
 end)
 
-Shop:AddButton("mua tộc cá",function()
+Shop:AddButton("Buy Sharkman Karate",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
 end)
 
-Shop:AddButton("mua tộc móng vuốt điện",function()
+Shop:AddButton("Buy Electric Claw",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
 end)
 
-Shop:AddButton("mua vỏ rồng",function()
+Shop:AddButton("Buy Dragon Talon",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
 end)
 
-Shop:AddButton("mua GodHuman",function()
+Shop:AddButton("Buy GodHuman",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
 end)
 
@@ -6221,7 +6221,7 @@ Misc:AddButton("Server Hop",function()
 Hop()
 end)
 
-Misc:AddButton("Hop tới sv ít người",function()
+Misc:AddButton("Hop To Lower Player",function()
 getgenv().AutoTeleport = true
 getgenv().DontTeleportTheSameNumber = true
 getgenv().CopytoClipboard = false
@@ -6270,18 +6270,18 @@ end)
 
 Misc:AddSeperator("Ui")
 
-Misc:AddButton("Open Devil Shop",function()
+Misc:AddButton("mở shop bán trái ác quỷ",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
 game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
 end)
 
-Misc:AddButton("mở túi đồ",function()
+Misc:AddButton("mở kho",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")
 wait(1)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Inventory.Visible = true
 end)
 
-Misc:AddButton("mở túi trái ác quỷ",function()
+Misc:AddButton("Mở kho trái cây",function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryFruits")
 game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitInventory.Visible = true
 end)
@@ -6328,7 +6328,7 @@ end)
 
 Misc:AddSeperator("Boost")
 
-Misc:AddButton("mở cổng",function()
+Misc:AddButton("mở cổng dịch chuyển",function()
 _G.UnlockPortal = true
 end)
 
@@ -6373,16 +6373,16 @@ end)
 end
 end)
 
-Misc:AddButton("Invisible",function()
+Misc:AddButton("tàng hình",function()
 game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
 end)
 
-Misc:AddButton("nhấn tp item",function()
+Misc:AddButton("đồ nhấn tp",function()
 local plr = game:GetService("Players").LocalPlayer
 local mouse = plr:GetMouse()
 local tool = Instance.new("Tool")
 tool.RequiresHandle = false
-tool.Name = "cầm lên để tp"
+tool.Name = "Teleport Tool"
 tool.Activated:Connect(function()
 local root = plr.Character.HumanoidRootPart
 local pos = mouse.Hit.Position+Vector3.new(0,2.5,0)
@@ -6428,7 +6428,7 @@ Misc:AddDropdown("chọn code",{"1MLIKES_RESET","THIRDSEA","SUB2GAMERROBOT_RESET
 _G.CodeSelect = value
 end)
 
-Misc:AddButton("Redeem Code",function()
+Misc:AddButton("nhập code",function()
 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(_G.CodeSelect)
 end)
 
@@ -6466,7 +6466,7 @@ OldBrightnessc = c.Brightness
 OldContrastc = c.Contrast
 OldTintColorc = c.TintColor
 OldTintColore = e.TintColor
-Misc:AddToggle("RTX Mode",_G.RTXMode,function(value)
+Misc:AddToggle("chế độ rtx",_G.RTXMode,function(value)
 _G.RTXMode = value
 if not _G.RTXMode then return end
 while _G.RTXMode do wait()
@@ -6575,14 +6575,14 @@ UpdateChestEsp()
 end
 end)
 
-Misc:AddToggle("ESP esp trái ác quỷ",false,function(value)
+Misc:AddToggle("ESP trái ác quỷ",false,function(value)
 DevilFruitESP = value
 while DevilFruitESP do wait()
 UpdateBfEsp()
 end
 end)
 
-Misc:AddToggle("ESP hoa",false,function(value)
+Misc:AddToggle("ESP bông hoa",false,function(value)
 FlowerESP = value
 while FlowerESP do wait()
 UpdateFlowerEsp()
@@ -6608,7 +6608,7 @@ InfiniteEnergy = value
 originalstam = LocalPlayer.Character.Energy.Value
 end)
 
-Misc:AddToggle("tự kích hoạt tộc",_G.AutoAgility,function(value)
+Misc:AddToggle("tự dộng bật tộc",_G.AutoAgility,function(value)
 _G.AutoAgility = value
 end)
 
@@ -6637,7 +6637,7 @@ end
 end
 end)
 
-Misc:AddToggle("Infinite Obversation Range",getgenv().InfiniteObRange,function(value)
+Misc:AddToggle("vô hạn sức chịu đựng haki quan sát",getgenv().InfiniteObRange,function(value)
 getgenv().InfiniteObRange = value
 local VS = game:GetService("Players").LocalPlayer.VisionRadius.Value
 while getgenv().InfiniteObRange do
@@ -6656,7 +6656,7 @@ end
 end
 end)
 
-Misc:AddToggle("Geppo không giới hạn",getgenv().InfGeppo,function(value)
+Misc:AddToggle("Infinite Geppo",getgenv().InfGeppo,function(value)
 getgenv().InfGeppo = value
 end)
 
@@ -6753,4 +6753,4 @@ end
 end)
 end
 end)
-end 12
+end
